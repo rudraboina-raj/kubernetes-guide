@@ -36,8 +36,8 @@ Kubernetes : -
 * it Supports other Container runtimes like CRIO
 and Container D.
 
-1. pod:
-
+1.pod:
+--------------------------------------------------------------------------
 pod is the smallest unit in the Kubernetes world.
 
 *  In Docker Container is the smallest unit.
@@ -50,12 +50,11 @@ pod is the smallest unit in the Kubernetes world.
 
 * Also keep in mind that each pod must be located on Same Sever
 
-2. Kubernetes Cluster : 
-
+2.Kubernetes Cluster : 
+------------------------------------------------------------------------------
 Kubernetes cluster consists of nodes,  Node is actually server either bare metal on virtual Server. And you could include multiple such servers into Kubernetes Cluster and they could be located in different data Centas in different parts of the world. But Usually nodes which belongs to the same kubernetes cluster are located close to each other in order to perform all jobs more efficiently.
 
-* In the side of the node there are pods. The pod is again the Smallest possible unit in Kubernetes.
-And inside of each pod there are Containers, usually Single Container per pod. And such pods are Created on different nodes and all of that is done automatically for you.
+* In the side of the node there are pods. The pod is again the Smallest possible unit in Kubernetes,And inside of each pod there are Containers, usually Single Container per pod. And such pods are Created on different nodes and all of that is done automatically for you.
 
 * Kubernetes does this job, but of course your job is to create such nodes and create Cluster based on those nodes. Nodes will automatically form a cluster without your intervention.
 
