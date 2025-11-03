@@ -35,3 +35,29 @@ Kubernetes : -
 
 * it Supports other Container runtimes like CRIO
 and Container D.
+
+1. pod:
+
+pod is the smallest unit in the Kubernetes world.
+
+*  In Docker Container is the smallest unit.
+
+* In Kubernetes pod is Smallest possible unit and Containers are created inside of pod. So pod anatomy is following. Inside of the pod there Could be Containers either one even Several Containers Also there are shared volumes and shared network resources for example shared IP address. This means that all Containers are inside the same pod share volume and Share ip address.
+
+* Multiple Containers inside of the same pod. Most Common Scenario is to have just a single Container per pod,But sometimes when Containers have to be tightened together and they heavily depend on each other and they could exist in the Same namespace and it is possible Create Several Container in the Same pod.
+
+* But one Container per pod is most Common Use Case.
+
+* Also keep in mind that each pod must be located on Same Sever
+
+2. Kubernetes Cluster : 
+
+Kubernetes cluster consists of nodes,  Node is actually server either bare metal on virtual Server. And you could include multiple such servers into Kubernetes Cluster and they could be located in different data Centas in different parts of the world. But Usually nodes which belongs to the same kubernetes cluster are located close to each other in order to perform all jobs more efficiently.
+
+* In the side of the node there are pods. The pod is again the Smallest possible unit in Kubernetes.
+And inside of each pod there are Containers, usually Single Container per pod. And such pods are Created on different nodes and all of that is done automatically for you.
+
+* Kubernetes does this job, but of course your job is to create such nodes and create Cluster based on those nodes. Nodes will automatically form a cluster without your intervention.
+
+* But after such initial Configuration everything will be automated and Kubernetes will automatically deploy on different nodes. 
+
