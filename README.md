@@ -76,7 +76,7 @@ Q. So which services actually run on different nodes?
 
 *  You already know what a Container runtime is. Container runtime runs actual Containers inside of each node. And these are such Container runtimes as docker, crio and Container D.
 
-*There are also such containers Services as Kubelet and such Services on each worker node Communicates with API Server Sevice on master node. Api Server Service is the main point of communication between different nodes in Kubernetes world.
+* There are also such containers Services as Kubelet and such Services on each worker node Communicates with API Server Sevice on master node. Api Server Service is the main point of communication between different nodes in Kubernetes world.
 
 *  Kube- proxy which is present on each node as well is responsible for network communication inside of each node and between nodes. Also there are other services which are present on master node and they are Scheduler and such Service is responsible for planning and distribution of load between the different nodes in cluster.
 
