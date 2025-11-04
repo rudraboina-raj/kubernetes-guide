@@ -94,4 +94,14 @@ Q. So which services actually run on different nodes?
 
 *  Main service on Master node is API Server and by the way using this API Server Service you could actually manage entire kubernetes cluster.
 
+Q. How is it done?
+--------------------------------------------------------------------------
+* It is done by using kubectl or kube-Control.
+
+* Kube control is Separate Command line tool which allows you to connect specific Kubernetes cluster and manages it remotely and kubectl Could be running even on you local computer.
+
+* Using such a kubectl tool you Could manage the remote Kubernetes cluster and using such tool you actually Connect using REST API to API Sever Service on Master node and such communications happen over HTTPS.
+
+* By the way other nodes in the cluster I mean worker nodes Communicate with the master node in the same fashion. It means that using such kubectl tool you could manage any remote Kubernetes Cluster That's it Kubernetes architecture overview.
+
 
