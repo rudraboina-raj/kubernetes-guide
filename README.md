@@ -60,3 +60,25 @@ Kubernetes cluster consists of nodes,  Node is actually server either bare metal
 
 * But after such initial Configuration everything will be automated and Kubernetes will automatically deploy on different nodes. 
 
+Q.  how do those deploy pods nodes actually Communicate with each other and how they are managed?
+-------------------------------------------------------------------------------------
+* In Kubernetes cluster there is Master node and Other nodes in the cluster are called worker nodes and the master node actually manages worker nodes.
+
+* Master node's job is to distribute for example load across other worker nodes and all pods which are related to your application are deployed on worker nodes.
+
+* Master node run only system pods which are responsible for actual work of Kubernetes cluster in general.
+
+* We Could also say that master node in the Kubernetes cluster is actually Control plane and it does not run your client applications.
+
+Q. So which services actually run on different nodes?
+-------------------------------------------------------------------------------------------
+*  There are such Services as kubelet, kube-proxy and Container runtime And those Services are present on each node in kubernetes Cluster.
+
+*  You already know what a Container runtime is. Container runtime runs actual Containers inside of each node. And these are such Container runtimes as docker, crio and Container D.
+
+*There are also such containers Services as Kubelet and such Services on each worker node Communicates with API Server Sevice on master node. Api Server Service is the main point of communication between different nodes in Kubernetes world.
+
+*  Kube- proxy which is present on each node as well is responsible for network communication inside of each node and between nodes. Also there are other services which are present on master node and they are Scheduler and such Service is responsible for planning and distribution of load between the different nodes in cluster.
+
+* Also there is Kube-Controller manager and it is a single point which Controls everything actually in Kubernetes cluster and it Control actually what happens on each of node in cluster.
+
