@@ -82,3 +82,16 @@ Q. So which services actually run on different nodes?
 
 * Also there is Kube-Controller manager and it is a single point which Controls everything actually in Kubernetes cluster and it Control actually what happens on each of node in cluster.
 
+* Also there is Cloud Controller manager and its job is interaction with Cloud Service provider where you actually run your Kubernetes clusters. Because usually you don't create such a cluster yourself using  your own Services. Instead you could very easily run kubernetes cluster from one of the cloud providers which actually perform almost automated creation of all nodes and the Connections between such nodes and for that you have to run cloud Controller, it manages service on the master node.
+
+* Also for example if you want to create deployment of your application inside of the Kubernetes cluster which will be opened to Outside world and allow Connections from outside you Could create a load balancer ip address and those load balancers Ip address are usually provided by specific cloud providers.
+
+* Also on the master node there is such service as Etcd and this is a Service which actually stores all logs related to operation of entire Kubernetes cluster and such logs are stored there as key value pairs. 
+
+* Also there are other services which are running on the master node for example a DNS Service which is responsible for names resolution in entire Kubernetes Cluster and for instance Using DNS service you could connect to Specific deployment by the name of the Corresponding deployment Service and in such way you could Connect different deployments with each other.
+
+* There are different services which are running on different nodes in Kubernetes cluster.
+
+*  Main service on Master node is API Server and by the way using this API Server Service you could actually manage entire kubernetes cluster.
+
+
