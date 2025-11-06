@@ -116,7 +116,7 @@ The 3 high level things that's define RBAC in Kubernetes.
 
 * Kubernetes Says am  not going to manage the  users, I will off load the users management to identity providers.
 
-Ex: White Once you install Something like Play store, firstly it Says login with Google.
+Ex: Once you install Something like Play store, firstly it Says login with Google.
 
 * If we create a Role within a Specific namespace Called Role.
 
@@ -150,12 +150,13 @@ Step-3
 
 ConfigMaps and Secrets:-
 ------------------------------------------------------------------------------
-1. ConfigMaps:
 
+1.ConfigMaps:
+--------------------------------------------------
 ConfigMaps is used to store data and this data can be at later point of time used by your application (or) pod (or) deployment
 
-2. Secrets:
-
+2.Secrets:
+----------------------------------------------------
 Secrets in Kubernetes solve the same problem, but Secrets deal with Sensitive data, like DB password, DB Username
 
 * In Kubernetes whenever you create a Resource what happens is this information gets Saved in Etcd. In Etcd the data is saved as objects.
