@@ -104,4 +104,73 @@ Q. How is it done?
 
 * By the way other nodes in the cluster I mean worker nodes Communicate with the master node in the same fashion. It means that using such kubectl tool you could manage any remote Kubernetes Cluster That's it Kubernetes architecture overview.
 
+RBAC :
+
+The 3 high level things that's define RBAC in Kubernetes.
+
+1. Service account /users
+
+2. Roles / Cluster Role
+
+3.  Role binding / Chester Rode binding.
+
+* Kubernetes Says am  not going to manage the  users, I will off load the users management to identity providers.
+
+Ex: White Once you install Something like Play store, firstly it Says login with Google.
+
+* If we create a Role within a Specific namespace Called Role.
+
+* If we create this Role in the Scope of cluster Called Cluster Role.
+
+Kubernetes Custom resources :
+
+Kubernetes allow you to extend the Capabilities to Kubernetes (or) extend the API of Kubernetes.
+
+* Means you can add new API resources to Kubernetes, using this resource you can ask your Customers to create or you can extend the Kubernetes by deploying a few resources.
+
+To extend
+1. CRD
+2. CR
+3. Custom Controller
+
+1.Custom Role Definition:
+Defining a new type of API to Kubernetes by Custom resource definition.
+*  crd is a yaml file which is used to introduce a new type of API to Kubernetes.
+* User has created a Custom resource (User has Submitted a CR), validated against a crd.
+
+Step-1
+*  We have to deploy Custom resource definitions  to extend the Capabilities of Kubernetes cluster.
+
+step-2 
+* We have to deploy Custom Controller
+
+Step-3
+* user who wants to use this feature on their Kubernetes cluster, like they have 100 namespaces but only 20 namespaces might want to use this Feature so, whoever the namespaces that they use, they will deploy Custom resource.
+
+ConfigMaps and Secrets:-
+
+1. ConfigMaps:
+
+ConfigMaps is used to store data and this data can be at later point of time used by your application (or) pod (or) deployment
+
+2. Secrets:
+
+Secrets in Kubernetes solve the same problem, but Secrets deal with Sensitive data, like DB password, DB Username
+
+* In Kubernetes whenever you create a Resource what happens is this information gets Saved in Etcd. In Etcd the data is saved as objects.
+
+* if any hacker tries to get access to Etcd they can retrieve the information, So if they are retrieving the information of your DB user and DB password that means your entire application (or) entire platform is compromised. get the details of database, that leads kubernetes doesn't have a proper Security.* To solve this Kubernetes says,
+
+→ if you have non-sensitive data store it in Config Maps
+
+→ Sensitive data store it in Secrets. In Secrets, it encrypt the data at the rest, that means to Say before the object is saved in Etcd, Kubernetes will encrypt it.
+
+* By default Kubernetes used a basic encryption but what Kubernetes says we will also allow you to use your own encryption (or) Custom encryption Mechanism so, you can pass to your values to API Server whenever you are storing on Apps server is feeding Some formation to etcd you can use custom encryption, Even if the hacker is trying to access etcd because he does not know the decryption key.
+
+* Hello can read all information from etcd, lets say he read the information about ConfigMap (or) pod (or) deployment but when it comes to secrets he is unable to read or retire a decrypted information.
+
+
+
+
+
 
