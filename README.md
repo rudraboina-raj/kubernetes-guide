@@ -105,7 +105,7 @@ Q. How is it done?
 * By the way other nodes in the cluster I mean worker nodes Communicate with the master node in the same fashion. It means that using such kubectl tool you could manage any remote Kubernetes Cluster That's it Kubernetes architecture overview.
 
 RBAC :
-
+---------------------------------------------------------
 The 3 high level things that's define RBAC in Kubernetes.
 
 1. Service account /users
@@ -123,7 +123,7 @@ Ex: White Once you install Something like Play store, firstly it Says login with
 * If we create this Role in the Scope of cluster Called Cluster Role.
 
 Kubernetes Custom resources :
-
+-------------------------------------------------------------
 Kubernetes allow you to extend the Capabilities to Kubernetes (or) extend the API of Kubernetes.
 
 * Means you can add new API resources to Kubernetes, using this resource you can ask your Customers to create or you can extend the Kubernetes by deploying a few resources.
@@ -134,6 +134,7 @@ To extend
 3. Custom Controller
 
 1.Custom Role Definition:
+
 Defining a new type of API to Kubernetes by Custom resource definition.
 *  crd is a yaml file which is used to introduce a new type of API to Kubernetes.
 * User has created a Custom resource (User has Submitted a CR), validated against a crd.
@@ -148,7 +149,7 @@ Step-3
 * user who wants to use this feature on their Kubernetes cluster, like they have 100 namespaces but only 20 namespaces might want to use this Feature so, whoever the namespaces that they use, they will deploy Custom resource.
 
 ConfigMaps and Secrets:-
-
+------------------------------------------------------------------------------
 1. ConfigMaps:
 
 ConfigMaps is used to store data and this data can be at later point of time used by your application (or) pod (or) deployment
